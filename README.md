@@ -3,7 +3,7 @@
 * [Overview](#overview)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Process Flow](#process-flow)
+* [Folder Structure](#folder-structure)
 ----
 ### Overview
 The PubMed Research Paper Extraction tool is used to extract the following key information using the PubMed API by taking into account the user's query as input -
@@ -27,3 +27,17 @@ This tool depends on conda installation in system.
 ### Usage
 The user can directly use [run.bat](/run.bat) to run the tool. The batch file activates the environment created in the setup phase and executes the tool.
 
+### Folder Structure
+1. The root folder contains the following files:
+    a. .gitignore: contains the list of files/folders that should not be pushed to GitHub
+    b. environment.yml: Contains all the setup configuration for running the code
+    c. main.py: The main python file which will be run while the tool is triggered. It will call the necessary backend scripts.
+    d. requirements.txt: The required libraries and their versions.
+
+2. src folder: This folder contains the backend python codes which will are imported in the main.py file
+    a. attribute_extraction.py: Contains different functions to extract the required information
+    b. log.py: Custom logger file to understand the runs.
+
+Once any user runs the tool, two new folders will be created automatically:
+    a. logs: This folder will keep the logs of all the runs.
+    b. output: If the user wants to save the data into csv, the data will be stored in this folder.

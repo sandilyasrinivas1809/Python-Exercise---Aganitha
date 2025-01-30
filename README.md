@@ -29,15 +29,15 @@ The user can directly use [run.bat](/run.bat) to run the tool. The batch file ac
 
 ### Folder Structure
 1. The root folder contains the following files:
-    a. .gitignore: contains the list of files/folders that should not be pushed to GitHub
-    b. environment.yml: Contains all the setup configuration for running the code
-    c. main.py: The main python file which will be run while the tool is triggered. It will call the necessary backend scripts.
-    d. requirements.txt: The required libraries and their versions.
+    - .gitignore: contains the list of files/folders that should not be pushed to GitHub
+    - environment.yml: Contains all the setup configuration for running the code
+    - main.py: The main python file which will be run while the tool is triggered. It will call the necessary backend scripts.
+    - requirements.txt: The required libraries and their versions.
 
 2. src folder: This folder contains the backend python codes which will are imported in the main.py file
-    a. attribute_extraction.py: Contains different functions to extract the required information
-    b. log.py: Custom logger file to understand the runs.
+    - attribute_extraction.py: Contains different functions to extract the required information
+    - log.py: Custom logger file to understand the runs.
 
 Once any user runs the tool, two new folders will be created automatically:
-    a. logs: This folder will keep the logs of all the runs.
-    b. output: If the user wants to save the data into csv, the data will be stored in this folder.
+- logs: This folder will keep the logs of all the runs.
+- output: If the user wants to save the data into csv, the data will be stored in this folder.

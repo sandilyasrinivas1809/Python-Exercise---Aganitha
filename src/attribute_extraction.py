@@ -58,7 +58,6 @@ def fetch_pubmed_details(pmid:str) -> ET:
     base_url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
     params = {"db": "pubmed", "id": pmid}
     response = requests.get(base_url, params=params)
-    response.text
     resp = ET.fromstring(response.content)
     return resp
 
